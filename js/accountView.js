@@ -10,7 +10,16 @@ function sendReq() {
             console.log("CCCCCCCCCCCCCCCCCCC")
             let user = JSON.parse(req.responseText);
             console.log(user);
-            
+            const myNames = user;
+            myNames.forEach((element) => {
+                console.log(element);
+            });
+            // for (let z of user) {
+            //     console.log(x);
+            // }
+            // for (let x in user) {
+
+            // }
 
         }
     }
@@ -19,3 +28,8 @@ function sendReq() {
 
 }
 
+for (let x in user) {
+    let paste = document.createElement("th");
+    paste.innerText = x;
+    document.getElementById("heading").appendChild(paste);
+}
